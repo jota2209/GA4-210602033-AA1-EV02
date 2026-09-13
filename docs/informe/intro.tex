@@ -1,0 +1,29 @@
+\section{Introducción}
+    
+    En la gestión de infraestructura de datos moderna, la elección del Sistema de Gestión de Bases de Datos Relacionales (RDBMS) determina factores críticos como la consistencia transaccional, la escalabilidad, la seguridad y los costos operativos. Dentro del catálogo de soluciones corporativas, \textbf{Oracle Database} se mantiene como un estándar industrial debido a su motor de alta concurrencia, su optimizador de consultas basado en costos (CBO) y su arquitectura multitenant. 
+    
+    Para entornos de aprendizaje, prototipado y despliegues ligeros, Oracle distribuye \textbf{Oracle Database 21c Express Edition (XE)}. Esta versión gratuita utiliza exactamente el mismo núcleo tecnológico que las ediciones comerciales (\textit{Standard} y \textit{Enterprise}), permitiendo acceder a funcionalidades avanzadas de administración y desarrollo empresarial sin incurrir en costos iniciales de licenciamiento.
+    
+    \subsection{Beneficios de Oracle Database 21c XE frente a otros motores}
+    
+    A diferencia de soluciones de código abierto consolidadas como PostgreSQL o MySQL, Oracle 21c XE presenta ventajas diferenciales vinculadas a la homologación técnica con ecosistemas empresariales de gran escala:
+    
+    \begin{itemize}
+    	\item \textbf{Arquitectura Multitenant Nativa (CDB / PDB):} Oracle 21c XE permite la gestión de bases de datos conectables (\textit{Pluggable Databases} o PDBs) dentro de una base de datos contenedora (\textit{Container Database} o CDB). A diferencia de los esquemas tradicionales de MySQL o las bases aisladas de PostgreSQL, esta arquitectura facilita la consolidación de servicios, la clonación rápida de instancias y la portabilidad directa de datos entre entornos.
+    	\item \textbf{Potencia y madurez de PL/SQL:} El lenguaje procedural PL/SQL ofrece compilación nativa, manejo granular de excepciones, gestión de paquetes (\textit{packages}) encapsulados y rendimiento optimizado en operaciones por bloques (\textit{BULK COLLECT} / \textit{FORALL}), superando en integración directa al estándar PL/pgSQL de PostgreSQL y a los procedimientos almacenados de MySQL.
+    	\item \textbf{Soporte multimodal convergente:} Integra en un único motor el soporte para tipos de datos relacionales, JSON binario nativo (con la estructura de almacenamiento optimizada \textit{OSON}), grafos de propiedades y datos espaciales mediante \textit{Oracle Spatial}, sin depender de extensiones de terceros.
+    	\item \textbf{Paridad total con ediciones comerciales:} Una base desarrollada sobre Oracle XE comparte sintaxis, tipos de datos y estructuras de almacenamiento con \textit{Oracle Enterprise Edition}. El proceso de migración o escalado hacia licencias empresariales o nubes gestionadas (\textit{Oracle Autonomous Database}) no requiere reescribir código ni adaptar dialectos SQL.
+    \end{itemize}
+    
+    \subsection{Casos de uso y entornos productivos recomendados}
+    
+    Si bien motores como PostgreSQL o MySQL son la opción predilecta para desarrollo web general, arquitecturas nativas de nube y microservicios sin costos de licencia, existen escenarios productivos y corporativos donde la tecnología de Oracle resulta la elección más sólida:
+    
+    \begin{itemize}
+    	\item \textbf{Sistemas de misión crítica y sector financiero:} Entornos donde la consistencia estricta ACID, la tolerancia a fallos transaccionales y la auditoría exhaustiva son requisitos regulatorios no negociables.
+    	\item \textbf{Ecosistemas ERP y CRM consolidados:} Aplicaciones como SAP, Siebel u Oracle E-Business Suite dependen de optimizaciones de bajo nivel y estructuras transaccionales diseñadas específicamente para interactuar con la infraestructura y el optimizador de Oracle.
+    	\item \textbf{Escalamiento horizontal activo-activo (Oracle RAC):} En entornos productivos corporativos que exigen disponibilidad ininterrumpida (99.999\%), Oracle ofrece \textit{Real Application Clusters} (RAC), permitiendo que múltiples servidores compartan almacenamiento y atiendan transacciones concurrentes simultáneamente.
+    	\item \textbf{Desarrollo y pruebas intermedias con Oracle XE:} Dentro de una estrategia de despliegue, Oracle XE opera de manera óptima en ambientes de integración continua (CI/CD), desarrollo local de equipos de ingeniería de datos y aplicaciones departamentales de baja demanda (sujetas al límite de hardware de \textbf{2 hilos de CPU, 2 GB de RAM y hasta 12 GB de datos de usuario}).
+    \end{itemize}
+    
+    El presente informe documenta el procedimiento técnico de instalación, configuración del servicio y creación de esquemas en \textbf{Oracle Database 21c Express Edition}, sentando las bases operativas para la administración de datos bajo estándares de arquitectura corporativa.
