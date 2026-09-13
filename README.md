@@ -9,7 +9,7 @@
 ### Documentación (Informe)
 Ver `README.md` del siguiente repositorio: [Ir a repositorio externo](https://github.com/jota2209/GA2-220501106-AA2-EV03/blob/main/README.md)
 ### Motor de Base de Datos
-Se debe clonar el repositorio y estando en la raíz del repositorio ejecutar para levantar el servicio:
+Se debe clonar el repositorio, cambiar el nombre de `.env.example` a `.env`, asignar a `ORACLE_PASSWORD` un valor personalizado y seguro y estando en la raíz del repositorio ejecutar para levantar el servicio:
 ```bash
 docker compose up -d
 ```
