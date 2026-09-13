@@ -23,7 +23,7 @@
 		
 	\end{lstlisting}
 	
-	El valor de contraseña textbf{ORACLE\_PWD} esta parametrizado para ser leído mediante archivo de variables de entorno \textbf{.env}
+	El valor de contraseña \textbf{ORACLE\_PWD} esta parametrizado para ser leído mediante archivo de variables de entorno \textbf{.env}
 	
 	Se puede acceder al repositorio de esta evidencia mediante el siguiente enlace:
 	
@@ -41,21 +41,23 @@
 		docker ps	
 	\end{lstlisting}
 	
-	\begin{figure}[H]
+	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=1.0\textwidth]{../../images/dockerps_cli.png}
 		\caption{Verificación de contenedores corriendo mediante terminal}
 		\label{fig:Screenshot de contenedores corriendo mediante terminal}
 	\end{figure}
+	\FloatBarrier
 	
 	También podemos verificar mediante la interfaz de Docker Desktop
 	
-	\begin{figure}[H]
+	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=1.0\textwidth]{../../images/docker_desktop.png}
 		\caption{Verificación de contenedores corriendo mediante Docker Desktop}
 		\label{fig:Screenshot Docker Desktop mostrando contenedor corriendo}
 	\end{figure}
+	\FloatBarrier
 	
 	\subsection{Prueba de Conexión con el Cliente GUI SQL Developer}
 	Una vez que verifiquemos que el motor de base de datos ya está corriendo en nuestra infraestructura local con contenedores, procedemos a hacer una prueba de conexión con las credenciales pertinentes usando \textbf{SYS} como nombre de usuario y el valor de ORACLE\_PASSWORD indicado en el archivo \textbf{.env} al probar la conexión si nos da Estado: Correcto podemos proceder a conectar.
