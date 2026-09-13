@@ -17,6 +17,19 @@
 \usepackage{xcolor} % <--- Soporte para la gestión y creación de colores personalizados
 \definecolor{codegray}{rgb}{0.95,0.95,0.95} % <--- Color gris claro para el fondo de los bloques de código
 \definecolor{codeblue}{rgb}{0.0,0.4,0.7} % <--- Color azul oscuro corporativo para palabras clave
+% IMÁGENES
+\graphicspath{ {../../images/} }
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{caption}
+\captionsetup[figure]{
+	labelfont=bf,             % Pone en negrita la etiqueta ("Figura 1.")
+	labelsep=period,     % Usa un punto para separar "Figura 1." del texto (o 'colon' para dos puntos)
+	justification=centering,  % Centra la leyenda completa debajo de la imagen
+	labelformat=simple,  % Mantiene la etiqueta estándar en la misma línea
+	textfont=it,          % Si quieres mantener el texto del título en cursiva
+	singlelinecheck=false     % Asegura que el centrado se aplique siempre
+}
 
 % C1.5 Hipervínculos y Navegación del Documento
 \usepackage{csquotes}
