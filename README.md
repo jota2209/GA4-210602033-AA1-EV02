@@ -6,4 +6,18 @@
 - **Ficha:** 3466363
 
 ## Instrucciones de Uso
+### Documentación (Informe)
 Ver `README.md` del siguiente repositorio: [Ir a repositorio externo](https://github.com/jota2209/GA2-220501106-AA2-EV03/blob/main/README.md)
+### Motor de Base de Datos
+Se debe clonar el repositorio y estando en la raíz del repositorio ejecutar para levantar el servicio:
+```bash
+docker compose up -d
+```
+para detener el servicio sin eliminación de datos
+```bash
+docker compose down
+```
+para detener el servicio con eliminación de datos
+```bash
+docker compose down -v
+```
