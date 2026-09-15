@@ -1,8 +1,7 @@
 \section{Implementación Contenerizada con Docker}
 	Se utilizó la siguiente declaración YAML docker-compose.yml para orquestar el levantamiento del servicio que contiene al motor de base de datos Oracle solicitado:
 
-	\begin{lstlisting}[language=yaml, caption={Archivo docker-compose.yml para Oracle Database XE}]
-		
+	\begin{lstlisting}[language=yaml, caption={Archivo docker-compose.yml para Oracle Database XE}]	
 		services:
 		oracle-xe:
 		image: container-registry.oracle.com/database/express:21.3.0-xe

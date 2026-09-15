@@ -1,0 +1,15 @@
+\section{Creación de Base de Datos}
+    \subsection{Primera Configuración}
+    Se debe crear un usuario diferente a los predeterminados del sistema destinado a gestionar la bodega de datos solicitada en el caso de estudio, para ello ejecutamos la siguiente sentencia en SQL Developer:
+    \begin{lstlisting}[language=sql, caption={Creación de Usuario de la Base de Datos}]	
+    	-- Creación del usuario y contraseña
+    	CREATE USER GIBD IDENTIFIED BY gibd_sena2026*;
+    	-- Asignación de permisos
+    	GRANT CREATE SESSION,
+    		CREATE TABLE,
+    		CREATE VIEW,
+    		CREATE SEQUENCE,
+    		CREATE PROCEDURE
+    	TO GIBD;
+    	ALTER USER GIBD QUOTA UNLIMITED ON USERS;
+    \end{lstlisting}
